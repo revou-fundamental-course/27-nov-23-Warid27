@@ -1,0 +1,233 @@
+html, body{
+    max-height: 100vh;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Roboto';
+}
+/* HOME */
+.home{
+    padding-top: 125px;
+    text-align: center;
+}
+.home p{
+    font-size: 18px;
+}
+/* NAVIGATION */
+#navigation-bar{
+    width: 100%;
+    top: 0;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #A8E0FF;
+    z-index: 999;
+}
+#logo a{
+    margin: 1em;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+#navigation{
+    margin: 0;
+    display: flex;
+}
+.nav-item{
+    margin: 0;
+    text-decoration: none;
+    color: black;
+    padding: 20px;
+    transition: all .3s ease;
+}
+.nav-item:hover{
+    background-color: #70CAD1;
+}
+
+/* LUAS SECTION */
+.input-section{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: center;
+    padding-top: 100px;
+}
+.input-section-div{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid #3185FC;
+    align-items: center;
+}
+
+/* IMAGE */
+img{
+    width: 30em;
+}
+/* HITUNG-LUAS-SEGITIGA */
+.hitung-segitiga{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid black;
+    width: 100%;
+}
+.judul-segitiga{
+    width: 100%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: #3185FC;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* DESKRIPSI */
+.deskripsi-segitiga{
+    width: 90%;
+    margin-bottom: 1em;
+}
+.deskripsi-segitiga p{
+    font-size: 16px;
+}
+.deskripsi-segitiga p:nth-child(2){
+    text-align: center;
+}
+
+
+/* INPUT SECTION */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.label-hitung{
+    font-size: 30px;
+    margin-top: 1em;
+    margin-bottom: .5em;
+    font-weight: bold;
+}
+
+.katik-input{
+    width: 90%;
+    outline: none;
+    margin: 5px;
+    border-radius: 5px;
+    padding: 10px;
+    border-color: rgb(112, 202, 209);
+}
+.katik-input:focus{
+    border-color: rgb(82, 172, 179);
+}
+
+/* BUTTON */
+.but{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 90%;
+}
+.buttons1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.buttons2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.but button{
+    transition: all .3s ease;
+    flex-grow: 1;
+}
+.buttons1 button{
+    cursor: pointer;
+    color: white;
+    background-color: rgb(70, 130, 180);
+    padding: 15px 25px;
+    border-radius: 5px;
+    border: none;
+}
+.buttons1 button:hover{
+    background-color: rgb(50, 100, 150);
+}
+.buttons2 button{
+    cursor: pointer;
+    color: white;
+    background-color: rgb(255, 166, 0);
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    align-items: flex-end;
+}
+.buttons2 button:hover{
+    background-color: rgb(225, 136, -30);
+}
+.but button:active{
+    transform: translateY(-10px);
+}
+
+/* HASIL KALI */
+
+.hasil-kali{
+    display: none;
+    width: 100%;
+    border: 1px solid black;
+    text-align: center;
+    margin: 5px;
+}
+.kali{
+    width: 90%;
+    outline: none;
+    margin: 5px;
+    border-radius: 5px;
+    padding: 10px;
+    border-color: rgb(112, 202, 209);
+}
+.keliling{
+    width: 90%;
+    outline: none;
+    margin: 5px;
+    border-radius: 5px;
+    padding: 10px;
+    border-color: rgb(112, 202, 209);
+}
+.label-hasil {
+    border: 1px solid black;
+    text-align: left;
+    margin-top: 5px;
+    margin:auto;
+    width: 91%;
+    display: block;
+  }
+footer{
+    text-align: center;
+    margin-top: 100px;
+    padding: 1em;
+    background-color: #A8E0FF;
+}
+footer div:hover{
+    animation: bounce 1.5s ease-in-out;
+}
+
+@keyframes bounce{
+    0%,
+    20%,
+    60%,
+    100% {
+        transform: translateY(0);
+    }
+    40%{
+        transform: translateY(-20px);
+    }
+    80%{
+        transform: translateY(-15px);
+    }
+}

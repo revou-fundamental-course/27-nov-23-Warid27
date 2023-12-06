@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Matematik Segitiga</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/logo.png">
+    <script defer src="js/script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id="navigation-bar">
+        <h3 id="logo"><a href="#">Katik</a></h3>
+        <div id="navigation">
+            <a href="#luas-segitiga" class="nav-item">Luas Segitiga</a>
+            <a href="#keliling-segitiga" class="nav-item">Keliling Segitiga</a>
+        </div>
+    </header>
+    <div class="home">
+        <h1>Welcome to Katik</h1>
+        <p>
+            Hai Kawan, Selamat datang di Katik &#128578; <br>
+            Sebuah web apps sederhana yang berfungsi untuk menghitung nilai luas dan keliling segitiga
+        </p>
+    </div>
+    <!-- SECTION LUAS SEGITIGA -->
+    <section class="input-section" id="luas-segitiga">
+        <div class="input-section-div">
+            <div class="judul-segitiga">Luas Segitiga</div>
+            <img src="assets/segitiga.png" alt="">
+            <div class="deskripsi-segitiga">
+                <p>Rumus Luas Segitiga yaitu:</p>
+                <p><b>L = 1/2 x a x t</b></p>
+                <p>
+                    Di mana: <br>
+                    L = Luas <br>
+                    a = Panjang Alas <br>
+                    t = Tinggi
+                </p>
+            </div>
+            <div class="hitung-segitiga">
+                <label for="luas" id="label-luas" class="label-hitung">Hitung Luas Segitiga</label>
+                <input type="number" id="input-alas" class="katik-input" placeholder="Nilai Alas">
+                <input type="number" id="input-tinggi" class="katik-input" placeholder="Nilai Tinggi">
+                <div class="hasil-kali" id="hasilParagraphLuas">
+                    <label for="hasil" class="label-hasil">Hasil: </label>
+                    <input type="text" id="hasilLuas" class="keliling" readonly>
+                </div>                  
+                <div class="but buttons1">
+                    <button onclick="luas()">Hitung</button>
+                </div>
+                <div class="but buttons2">
+                    <button onclick="resetLuas()">Reset</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION KELILING SEGITIGA -->
+    <section class="input-section" id="keliling-segitiga">
+        <div class="input-section-div">
+            <div class="judul-segitiga">Keliling Segitiga</div>
+            <img src="assets/segitiga.png" alt="">
+            <div class="deskripsi-segitiga">
+                <p>Rumus Keliling Segitiga yaitu:</p>
+                <p><b>K = S1 + S2 + S3</b></p>
+                <p>
+                    Di mana: <br>
+                    S1 = Sisi A <br>
+                    S2 = Sisi B <br>
+                    S3 = Sisi C
+                </p>
+            </div>
+            <div class="hitung-segitiga">
+                <label for="luas" id="label-keliling" class="label-hitung">Hitung Keliling Segitiga</label>
+                <input type="number" id="input-S1" class="katik-input" placeholder="Nilai S1">
+                <input type="number" id="input-S2" class="katik-input" placeholder="Nilai S2">
+                <input type="number" id="input-S3" class="katik-input" placeholder="Nilai S3">
+                <div class="hasil-kali" id="hasilParagraphKeliling">
+                    <label for="hasil" class="label-hasil">Hasil: </label>
+                    <input type="text" id="hasilKeliling" class="kali" readonly>
+                </div>
+                <div class="but buttons1">
+                    <button onclick="keliling()">Hitung</button>
+                </div>
+                <div class="but buttons2">
+                    <button onclick="resetKeliling()">Reset</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer><div>Copyright &copy; 2023 Mohamad Sinatrya Al Warid</div></footer>
+</body>
+</html>
