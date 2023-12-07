@@ -48,6 +48,9 @@ body{
 }
 
 /* LUAS SECTION */
+input:focus{
+    animation: bounce 1.5s ease-out;
+}
 .input-section{
     margin: auto;
     display: flex;
@@ -55,6 +58,7 @@ body{
     width: 80%;
     align-items: center;
     padding-top: 100px;
+    transition: all .5s ease-in-out;
 }
 .input-section-div{
     margin: auto;
@@ -63,6 +67,11 @@ body{
     width: 100%;
     border: 1px solid #3185FC;
     align-items: center;
+    transition: all .5s ease-in-out;
+}
+.input-section-div:hover{
+    background-color: #70CAD1;
+    transform: translateY(-10px);
 }
 
 /* IMAGE */
@@ -86,6 +95,8 @@ img{
     font-size: 30px;
     font-weight: bold;
     color: #ffffff;
+    cursor: default;
+    transition: all .5s ease;
 }
 
 /* DESKRIPSI */
@@ -113,6 +124,27 @@ input[type=number]::-webkit-outer-spin-button {
     margin-top: 1em;
     margin-bottom: .5em;
     font-weight: bold;
+}
+.label-hitung {
+    position: relative;
+    color: #000;
+}
+.label-hitung:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    border-radius: 5px;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    transform-origin: bottom right;
+    transition: transform .5s ease-out;
+}
+.label-hitung:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 .katik-input{
@@ -179,7 +211,6 @@ input[type=number]::-webkit-outer-spin-button {
 .hasil-kali{
     display: none;
     width: 100%;
-    border: 1px solid black;
     text-align: center;
     margin: 5px;
 }
@@ -200,7 +231,6 @@ input[type=number]::-webkit-outer-spin-button {
     border-color: rgb(112, 202, 209);
 }
 .label-hasil {
-    border: 1px solid black;
     text-align: left;
     margin-top: 5px;
     margin:auto;
@@ -209,6 +239,7 @@ input[type=number]::-webkit-outer-spin-button {
   }
 footer{
     text-align: center;
+    cursor: default;
     margin-top: 100px;
     padding: 1em;
     background-color: #A8E0FF;
