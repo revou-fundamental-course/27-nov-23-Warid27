@@ -1,33 +1,33 @@
 // LUAS SEGITIGA
 function luas() {
   // Mendapatkan nilai dari kedua input
-  var angka1 = document.getElementById("input-alas").value;
-  var angka2 = document.getElementById("input-tinggi").value;
+  var angkaAlas = document.getElementById("input-alas").value;
+  var angkaTinggi = document.getElementById("input-tinggi").value;
 
   // Menyimpan elemen hasil untuk nantinya diubah
   var hasilParagraphLuas = document.getElementById("hasilParagraphLuas");
   var hasilInput = document.getElementById("hasilLuas");
 
   // Periksa apakah inputAlas dan inputTinggi kosong
-  if (angka1 === "" && angka2 === "") {
+  if (angkaAlas === "" && angkaTinggi === "") {
     alert("Mohon masukkan angka");
     return;
   }
 
   // Periksa apakah inputAlas kosong
-  if (angka1 === "") {
+  if (angkaAlas === "") {
     alert("Mohon Masukkan Alas");
     return;
   }
 
   // Periksa apakah inputTinggi kosong
-  if (angka2 === "") {
+  if (angkaTinggi === "") {
     alert("Mohon Masukkan Tinggi");
     return;
   }
 
   // Mengalikan kedua nilai dan membaginya dengan 2
-  var hasilLuas = (parseFloat(angka1) * parseFloat(angka2)) / 2;
+  var hasilLuas = (parseFloat(angkaAlas) * parseFloat(angkaTinggi)) / 2;
 
   // Periksa apakah hasilLuas adalah angka
   if (isNaN(hasilLuas)) {
@@ -75,6 +75,24 @@ function keliling() {
     return;
   }
 
+  // Periksa apakah inputS1 dan input S2 kosong
+  if (angkaS1 === "" && angkaS2 === "") {
+    alert("Mohon Masukkan S1 dan S2");
+    return;
+  }
+
+  // Periksa apakah inputS1 dan input S3 kosong
+  if (angkaS1 === "" && angkaS3 === "") {
+    alert("Mohon Masukkan S1 dan S3");
+    return;
+  }
+
+  // Periksa apakah inputS2 dan input S3 kosong
+  if (angkaS2 === "" && angkaS3 === "") {
+    alert("Mohon Masukkan S2 dan S3");
+    return;
+  }
+
   // Periksa apakah inputS1 kosong
   if (angkaS1 === "") {
     alert("Mohon Masukkan S1");
@@ -94,10 +112,10 @@ function keliling() {
   }
 
   // Mengalikan kedua nilai dan membaginya dengan 2
-  var hasilLuas = parseFloat(angkaS1) + parseFloat(angkaS2) + parseFloat(angkaS3);
+  var hasilKeliling = parseFloat(angkaS1) + parseFloat(angkaS2) + parseFloat(angkaS3);
 
-  // Periksa apakah hasilLuas adalah angka
-  if (isNaN(hasilLuas)) {
+  // Periksa apakah hasilKeliling adalah angka
+  if (isNaN(hasilKeliling)) {
     hasilParagraphKeliling.style.display = "none";
     alert("Mohon masukkan angka");
   } else {
@@ -106,15 +124,16 @@ function keliling() {
     document.querySelector(".label-hasil").style.display = "block";
 
     // Mengisi nilai input dan menonaktifkannya
-    hasilInputKeliling.value = hasilLuas;
+    hasilInputKeliling.value = hasilKeliling;
     hasilInputKeliling.disabled = true;
   }
 }
 
 function resetKeliling() {
   // Mengosongkan nilai kedua input
-  document.getElementById("input-alas").value = "";
-  document.getElementById("input-tinggi").value = "";
+  document.getElementById("input-S1").value = "";
+  document.getElementById("input-S2").value = "";
+  document.getElementById("input-S3").value = "";
 
   // Menyembunyikan hasil dan pesan kesalahan
   var hasilParagraphKeliling = document.getElementById("hasilParagraphKeliling");

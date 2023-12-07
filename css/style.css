@@ -31,6 +31,12 @@ body{
     cursor: pointer;
     text-decoration: none;
     color: black;
+    transition: all .3s ease;
+}
+
+#logo a:hover{
+    font-size: larger;
+    color: #fff;
 }
 #navigation{
     margin: 0;
@@ -70,8 +76,7 @@ input:focus{
     transition: all .5s ease-in-out;
 }
 .input-section-div:hover{
-    background-color: #70CAD1;
-    transform: translateY(-10px);
+    transform: translateY(-20px);
 }
 
 /* IMAGE */
@@ -238,13 +243,28 @@ input[type=number]::-webkit-outer-spin-button {
     display: block;
   }
 footer{
-    text-align: center;
-    cursor: default;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1em;
     margin-top: 100px;
     padding: 1em;
     background-color: #A8E0FF;
 }
-footer div:hover{
+footer span{
+    font-size: 30px;
+    font-weight: bolder;
+    margin-top: -5px;
+}
+footer a{
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 25;
+    font-weight: bold;
+}
+footer a:hover{
     animation: bounce 1.5s ease-in-out;
 }
 
